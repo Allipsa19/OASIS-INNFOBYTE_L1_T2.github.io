@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.Home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #187f8b;
+  }
+  
+
+.navbar{
+    position: fixed;
+    padding: .3rem 0rem .3rem 0;
+    width: 100%;
+    background-color: #0f6871;
+    z-index: 2;   
+}
+.upBtn{
+  display: none;
+  height: 40px;
+  width: 35px;
+  display: grid;
+  position: fixed;
+  bottom: 12px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.upBtn:hover{
+  background-color: beige;
+}
+
+.logo{
+    text-transform: uppercase;
+    display: inline;
+    background-color: transparent;
+    color: beige;
+    font-weight: 600;
+    font-size: x-large;
+    text-align: center;
+    margin: 0 53rem 0 7.5rem;
+}
+
+
+.navbar a{
+    background-color: transparent;
+    margin: 0 1.5rem 0 1.5rem;
+    text-decoration: none;
+    color: beige;
+    font-weight: 600; 
+    font-size: large;
+    text-align: right;
+    
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+    color: #032c31;
+    display: inline;
+}
+
+.content{
+    display: flex;
+    width: 90rem;
+    height: 40rem;
+}
+
+.info {
+    width: 50rem;
+    height: 30rem;
+    margin-top: 10rem;
+    margin-left: 7.8rem;
+}
+h1{
+    color: beige;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.name{
+    color: #032c31;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#animated-text{
+    position: relative;
+    font-size: 3rem;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+#animated-text::before{
+    content: " Student";
+    color: #8ee1db;
+    animation: words 20s infinite;
+}
+
+#animated-text::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #187f8b;
+    border-left: 2px solid #000000;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #00000000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: " Student.";
+    }
+    21%,40%{
+        content: " Coder.";
+    }
+    41%,60%{
+        content: " Frontend Developer.";
+    }
+    61%,80%{
+        content: " Designer.";
+    }
+    81%,100%{
+        content: " Dancer.";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+p{
+    margin-top: 1.7rem;
+    font-size: 1.3rem;
+    font-weight: 490;
+    width: 45rem;
+}
+
+.btn{
+    margin-top: 3.8rem;
+}
+
+.btn a{
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #032c31;
+    margin-right: 2rem;
+    border-radius: 2rem;
+    color: beige;
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+
+.btn a:hover{
+    background-color: beige;
+    color: #032c31;
+}
+
+.dp {
+    background-image:linear-gradient( rgb(250, 250, 102), rgb(95, 95, 36)); 
+    width: 20rem;
+    height: 20rem;
+    margin-left: 7rem;
+    margin-top: 9rem;
+    border-radius: 50%;
+}
+
+.dp img{
+    background-color: transparent;
+    width: 17rem;
+    height: 20rem;
+    margin-left: 1.5rem;
+    border-radius: 38%;
+}
+
+.social img{
+    height: 6vh;
+    width: 6vh;
+    justify-content: center;
+    margin: 2.5rem 0 0 3rem;
+    padding: .3rem;
+    background-color: beige;
+    border-radius: 50%;
+}
+
+.social img:hover{
+    opacity: 0.7;
+  }
+  
+  /* ABOUT PAGE */
+  .about {
+    height: 100vh;
+    width: 100%;
+    background-color: #187f8b;
+  }
+
+  .bio{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #032c31;
+  }
+
+  .course{
+    margin-top: 1rem;
+    height: 40vh;
+  }
+  .course div{
+    display: flex;
+    height: 20rem;
+  }
+  .data{
+    height: 40vh;
+    width: 19.5rem;
+    margin-left: 3rem;
+    font-size: 20px;
+    color: beige;
+    text-align: center;
+    margin-top: .5rem;
+    text-transform: capitalize;
+  }
+  .area, .certificate{
+    background-color: #0f6871;
+    
+    width: 11rem;
+    height: 10rem;
+    border-radius: 20px;
+  }
+  .certificate:hover{
+    opacity: 0.7;
+  }
+
+  .project{
+    margin-top: 1rem;
+    height: 40vh;
+  }
+
+  .project div{
+    display: flex;
+  }
+  .pro{
+    height: 40vh;
+    width: 19.5rem;
+    margin-left: 9rem;
+    font-size: 20px;
+    color: beige;
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: capitalize;
+  }
+  
+
+  /* SKILL PAGE */
+  .skill {
+    height: 100vh;
+    width: 100%;
+    background-color: #187f8b;
+  }
+  .skillbar{
+    margin-top: 3rem;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+  }
+  .techinnical-bar{
+    width: 50%;
+    height: 70vh;
+    
+  }
+  .heading{
+    text-align: center;
+    text-decoration: underline;
+    color: beige;
+    text-decoration-thickness: 5px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-underline-offset: 7px;
+  }
+
+  .bar{
+    margin-left: 4rem;
+    font-size: 20px;
+  }
+  .techinnical-bar .bar{
+    margin: 40px 0 0 4rem;
+  }
+  .techinnical-bar .bar:first-child{
+    margin-top: 0;
+  }
+  .techinnical-bar .bar:last-child{
+    margin-bottom: 0;
+  }
+  .sinfo{
+    color: beige;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .techinnical-bar .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+    height: 5px;
+    background-color: #0f6871;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  @keyframes animate{
+    100%{
+      transform: scaleX(1);
+    }
+  }
+
+  .techinnical-bar .bar .progress-line span{
+    height: 100%;
+    background-color: #032c31;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .progress-line.java span{
+    width: 70%;
+  }
+  .progress-line.python span{
+    width: 65%;
+  }
+  .progress-line.html span{
+    width: 80%;
+  }
+  .progress-line.css span{
+    width: 75%;
+  }
+  .progress-line.javascript span{
+    width: 60%;
+  }
+
+  .progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #032c31;
+    color: beige;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+  }
+
+  .progress-line.java span::after{
+    content: "70%";
+  }
+  .progress-line.python span::after{
+    content: "65%";
+  }
+  .progress-line.html span::after{
+    content: "80%";
+  }
+  .progress-line.css span::after{
+    content: "75%";
+  }
+  .progress-line.javascript span::after{
+    content: "60%";
+  }
+
+  .progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #032c31;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+  }
+
+  @keyframes showText{
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  .professional-bar{
+    width: 50%;
+    height: 70vh;
+  }
+  
+  .circle-container{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  
+  .circle{
+    text-align: center;
+    color: beige;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .progress-circle {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #0f6871; }
+  
+  .progress-circle:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-animation: colorload 2s;
+    animation: colorload 2s; }
+  
+  .progress-circle span {
+    font-size: 1rem;
+    color: beige;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    text-align: center;
+    border-radius: 50%;
+    background: #187f8b;
+    z-index: 1; 
+  }
+  
+  .progress-circle span:after {
+    content: "%";
+    font-weight: 600;
+    color: beige; 
+  }
+  
+  .progress-circle.progress-1:after {
+    background-image: linear-gradient(18deg, #032c31 50%, transparent 50%, transparent), linear-gradient(270deg, #032c31 50%, #0f6871 50%, #0f6871); }
+  
+  .progress-circle.progress-2:after {
+    background-image: linear-gradient(-18deg, #032c31 50%, transparent 50%, transparent), linear-gradient(270deg, #032c31 50%, #0f6871 50%, #0f6871); }
+  
+  .progress-circle.progress-3:after {
+    background-image: linear-gradient(-36deg, #032c31 50%, transparent 50%, transparent), linear-gradient(270deg, #032c31 50%, #0f6871 50%, #0f6871); }
+  
+  .progress-circle.progress-4:after {
+    background-image: linear-gradient(0deg, #032c31 50%, transparent 50%, transparent), linear-gradient(270deg, #032c31 50%, #0f6871 50%, #0f6871); }  
+  
+  @keyframes colorload {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg); }
+    100% {
+      opacity: 1;
+      transform: rotate(360deg); }
+     }
+    
+
+  /* CONTACT PAGE */
+  .contact {
+    height: 100vh;
+    width: 100%;
+    background-color: #187f8b;
+  }
+  .head{
+    padding: 3rem 0 0 0;
+    text-align: center;
+  }
+  .form-page{
+    background-color: #0f6871;
+    width: 30rem;
+    height: 28rem;
+    margin-top: 1rem;
+    margin-left: 32rem;
+    border-radius: 1.5rem;
+  }
+  #contact_form{
+    padding-top: 2rem;
+  }
+  .col{
+    margin: 1rem 5rem 0 5rem;
+    color: beige;
+    
+  }
+  .form-control{
+    border-radius: 5px;
+    width: 20rem;
+  }
+  .submit-btn{
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #032c31;
+    margin: 1.5rem 0 0 10rem;
+    border-radius: 2rem;
+    color: beige;
+    font-weight: 500;
+    letter-spacing: .2rem;
+  }
+  .submit-btn:hover{
+    background-color: beige;
+    color: #032c31;
+  }
+  :placeholder-shown{
+    padding-left: .3rem;
+  }
+  label{
+    font-weight: 500;
+  }
+  footer {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  footer p {
+    margin-top: .5rem;
+    color: #032c31;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  footer p span{
+    color: beige;
+  }
